@@ -56,7 +56,7 @@ No need to download anything — just click the link and start playing:
 
 ## 📸 Screenshot
 
-![Game Screenshot](assets/screenshot.png) 
+![Game Screenshot](assets/images/screen.png)
 
 ---
 
