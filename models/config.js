@@ -14,6 +14,7 @@ export const restartBtn = document.getElementById("restartBtn");
 export const scoreValue = document.querySelector(".score-value");
 export const lifeValue = document.querySelector(".lives-value");
 export const gameContainer = document.getElementById("content")
+export const storyDiv = document.querySelector(".story");
 
 
 // Game state
