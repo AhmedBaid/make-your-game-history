@@ -4,7 +4,16 @@ import { clearAnimation } from "./helpers.js";
 export function gameWin() {
   config.gameState.gameStart = false;
   config.gameState.gamePause = true;
-  config.gameMessage.innerText = `You Win! Press Space to Restart\n your final score : ${config.gameStatus.score}`;
+  config.gameMessage.innerHTML = `
+  <h2 class="title victory">🌌 النصر 🌌</h2>
+  <div class="story-box">
+    <p>لقد جمعت كل الشظايا وأعدت <span class="highlight">كريستال التوازن</span> إلى شكله الكامل!</p>
+    <p>سطع نور قوي في أنحاء المجرّة وطرد الظلام بعيداً.</p>
+    <p>الحارس يبتسم ويقول: <span class="quote">"لقد عاد السلام… حتى تنادينا النجوم مرة أخرى."</span></p>
+  </div>
+  لقد فزت! \n اضغط على زر المسافة لإعادة اللعب \n نتيجتك النهائية: ${config.gameStatus.score}`;
+
+
   config.gameMessage.style.display = "block";
   clearAnimation();
   clearInterval(config.time.interval);
@@ -25,7 +34,15 @@ export function gameOver() {
   config.gameState.gamePause = true;
 
   clearAnimation();
-  config.gameMessage.innerText = `Game Over! \n Press Space to Restart \n your final score : ${config.gameStatus.score}`;
+  config.gameMessage.innerHTML = `
+  <h2>☠️ الهزيمة ☠️</h2>
+  <div class="story-box">
+    <p>كرة الفوتون خبت… والشظايا تفرقت في الفراغ مجدداً.</p>
+    <p>الظلام ابتلع المجرّة، والتوازن انهار.</p>
+    <p>همس أخير يتردد: <span class="highlight">الكون غرق في فوضى أبدية</span></p>
+  </div>
+  النهاية! \n اضغط على زر المسافة لإعادة اللعب \n نتيجتك النهائية: ${config.gameStatus.score}`;
+
   config.gameMessage.style.display = "block";
 
   // Stop timer

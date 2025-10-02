@@ -8,6 +8,7 @@ import {
   updateGameAreaSize,
   setupSizes,
   createBricks,
+  story,
 } from "./models/helpers.js";
 import {
   Pause,
@@ -17,7 +18,7 @@ import {
   gameWin,
 } from "./models/gameStatus.js";
 
-function loop() {
+export function loop() {
   if (!config.gameState.gameStart && !config.wait.status) return;
   if (config.gameState.gameStart && !config.wait.status) {
     update();
@@ -37,6 +38,7 @@ function loop() {
 }
 
 function update() {
+
   movePaddle(config.cursors, config.paddle, config.cvs);
   config.ball.x += config.ball.dx;
   config.ball.y += config.ball.dy;
@@ -137,6 +139,7 @@ function update() {
 
       const threshold = 4; // corner sensitivity in pixels
 
+
       if (Math.abs(minOverlapX - minOverlapY) < threshold) {
         config.ball.dx *= -1;
         config.ball.dy *= -1;
@@ -151,6 +154,9 @@ function update() {
         config.gameStatus.score += 20;
       }
 
+      if (config.gameStatus.score == 200 || config.gameStatus.score == 400) {
+        return story(config.gameStatus.score);
+      };
       break;
     }
   }
