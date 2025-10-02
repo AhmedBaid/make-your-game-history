@@ -6,18 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Breakout Game</title>
 </head>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="assets/style/style.css" />
 
 <body>
   <!--  intro -->
-  <div class="image" id="introScreen">
-    <h1>🧱 BRICK BREAKER 🧱</h1>
-    <br>
-    <p class="trophy">🏆 INCREASE YOUR SCORE BY DESTROYING THE BRICKS!</p>
-    <p class="heart">❤️ YOU LOSE A LIFE IF THE BALL FALLS OFF THE SCREEN</p>
-    <br>
-    <p class="space-text">PRESS SPACE TO START</p>
+  <div class="intro-screen" id="introScreen">
+    <h1 class="title">✨ كاسر الطوب: شظايا الكريستال ✨</h1>
+
+    <div class="story-box">
+      <p>في مجرّة بعيدة، كان <span class="highlight">كريستال التوازن</span> يحافظ على الانسجام بين النور والظلام.</p>
+      <p>لكن في ليلة مظلمة، تحطّم الكريستال إلى مئات الشظايا، وتفرّقت في أرجاء الكون.</p>
+      <p>بدون الكريستال، عمت الفوضى: اصطدمت الكواكب، خبت النجوم، وسيطر الظلام.</p>
+      <br>
+      <p>أنت <span class="highlight">الطيّار الحارس</span>، تقود <span class="highlight">سفينة المجداف الطاقية</span>،
+        الوحيدة القادرة على التحكم في <span class="highlight">كرة الفوتون</span>.</p>
+      <p>مهمتك: تحطيم جدران الشظايا، استعادة الكريستال قطعة قطعة، وإعادة التوازن إلى الكون.</p>
+    </div>
+
+    <div class="instructions">
+      <p class="trophy">🏆 زد نقاطك بتدمير الجدران!</p>
+      <p class="heart">❤️ تخسر حياة إذا سقطت الكرة خارج الشاشة!</p>
+    </div>
+
+    <p class="start">🔹 اضغط <span class="space">SPACE</span> لبدء اللعب 🔹</p>
   </div>
+
   <!--  game message -->
   <div class="game-message" id="gameMessage">
     <div class="pause-menu">
