@@ -93,13 +93,15 @@ export function story(score) {
   clearAnimation();
   creatTime();
   config.storyDiv.style.display = "block";
+  config.gameContainer.style.opacity = '0.3';
+
   if (score == 200) {
     config.storyDiv.innerHTML = `
         <p>لقد جمعت <span class="highlight">200 نقطة</span>… شظايا الكريستال بدأت تلمع بقوة.</p>
         <p>لكن الظلال اكتشفت تحركاتك… وستضع <span class="highlight">حواجز أقوى</span> لإيقافك.</p>
         <p>تابع التقدّم، فالكون كله يعتمد عليك!</p>
         `
-  } else if (score == 20) {
+  } else {
     config.storyDiv.innerHTML = `
     <p>مذهل! لقد جمعت <span class="highlight">400 نقطة</span>، والكون بدأ يستعيد توازنه.</p>
     <p>خلف الجدار التالي يكمن <span class="highlight">قلب الظلام</span>… المعركة الأخيرة تقترب!</p>
@@ -107,9 +109,10 @@ export function story(score) {
   }
   setTimeout(() => {
     config.storyDiv.style.display = "none";
+    config.gameContainer.style.opacity = '1';
     config.gameState.gameStart = true;
     config.gameState.gamePause = false;
     creatTime();
     loop();
-  }, 20000);
+  }, 3000);
 }

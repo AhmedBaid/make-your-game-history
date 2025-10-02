@@ -154,7 +154,7 @@ function update() {
         config.gameStatus.score += 20;
       }
 
-      if (config.gameStatus.score == 200 || config.gameStatus.score == 400) {        
+      if (config.gameStatus.score == 200 || config.gameStatus.score == 400) {
         return story(config.gameStatus.score);
       };
       break;
