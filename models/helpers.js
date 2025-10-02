@@ -99,7 +99,7 @@ export function story(score) {
         <p>لكن الظلال اكتشفت تحركاتك… وستضع <span class="highlight">حواجز أقوى</span> لإيقافك.</p>
         <p>تابع التقدّم، فالكون كله يعتمد عليك!</p>
         `
-  } else {
+  } else if (score == 20) {
     config.storyDiv.innerHTML = `
     <p>مذهل! لقد جمعت <span class="highlight">400 نقطة</span>، والكون بدأ يستعيد توازنه.</p>
     <p>خلف الجدار التالي يكمن <span class="highlight">قلب الظلام</span>… المعركة الأخيرة تقترب!</p>
@@ -111,5 +111,5 @@ export function story(score) {
     config.gameState.gamePause = false;
     creatTime();
     loop();
-  }, 2000);
+  }, 20000);
 }
