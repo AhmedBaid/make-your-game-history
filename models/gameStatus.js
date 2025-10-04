@@ -5,7 +5,7 @@ export function gameWin() {
   config.gameState.gameStart = false;
   config.gameState.gamePause = true;
   config.gameMessage.innerHTML = `
-  <h2 class="title victory">🌌 النصر 🌌</h2>
+  <h2 class="title victory"> النصر </h2>
   <div class="story-box">
     <p>لقد جمعت كل الشظايا وأعدت <span class="highlight">كريستال التوازن</span> إلى شكله الكامل!</p>
     <p>سطع نور قوي في أنحاء المجرّة وطرد الظلام بعيداً.</p>
@@ -35,7 +35,7 @@ export function gameOver() {
 
   clearAnimation();
   config.gameMessage.innerHTML = `
-  <h2>☠️ الهزيمة ☠️</h2>
+  <h2> الهزيمة </h2>
   <div class="story-box">
     <p>كرة الفوتون خبت… والشظايا تفرقت في الفراغ مجدداً.</p>
     <p>الظلام ابتلع المجرّة، والتوازن انهار.</p>
