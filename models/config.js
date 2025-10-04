@@ -23,12 +23,13 @@ export const gameState = {
   gamePause: false,
   gameOver: false,
   gameWine: false,
+  gameStory: false
 };
 
 // Brick settings
 export const brick = {
   rows: 6,
-  cols: 6 ,
+  cols: 6,
   gap: 10,
   width: 0,
   height: 0,

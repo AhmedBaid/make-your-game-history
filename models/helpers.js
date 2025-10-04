@@ -90,6 +90,7 @@ export function updateGameAreaSize() {
 export function story(score) {
   config.gameState.gameStart = false;
   config.gameState.gamePause = true;
+  config.gameState.gameStory = true;
   clearAnimation();
   creatTime();
   config.storyDiv.style.display = "block";
@@ -112,7 +113,8 @@ export function story(score) {
     config.gameContainer.style.opacity = '1';
     config.gameState.gameStart = true;
     config.gameState.gamePause = false;
+    config.gameState.gameStory = false;
     creatTime();
     loop();
-  }, 3000);
+  }, 4000);
 }

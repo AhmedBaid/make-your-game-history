@@ -220,6 +220,7 @@ function GameLoop() {
         creatTime();
         Pause();
       } else if (
+        !config.gameState.gameStory &&
         !config.gameState.gameStart &&
         config.gameState.gamePause &&
         !config.gameState.gameOver &&
@@ -250,7 +251,7 @@ function GameLoop() {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
       Restart();
-    }, 200);
+    }, 500);
   });
 }
 
