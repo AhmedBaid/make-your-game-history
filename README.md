@@ -35,7 +35,7 @@ make-your-game/
 
 1. Clone or download the project.  
 ```
-git clone https://github.com/AhmedBaid/Full-Ecommerce-App
+git clone https://github.com/AhmedBaid/make-your-game-history
 ```
 2. Open `html.html` in your browser.
 3. Start playing!
