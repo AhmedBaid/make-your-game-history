@@ -13,7 +13,6 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: "Orbitron", "Arial", sans-serif;
-  background: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +52,7 @@ body::after {
     radial-gradient(2px 2px at 79% 53%, white, transparent);
   background-size: 200px 200px, 300px 300px, 150px 150px, 250px 250px, 350px 350px, 180px 180px, 220px 220px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 150px 50px, 90px 150px, 200px 80px;
-  animation: stars 200s linear infinite;
+  animation: stars 50s linear infinite;
   pointer-events: none;
   opacity: 0.6;
   z-index: -1;
@@ -80,11 +79,6 @@ body::after {
   border-image: linear-gradient(135deg, #8b5cf6, #3b82f6, #ec4899) 1;
   border-radius: 25px;
   will-change: transform;
-  box-shadow:
-    0 0 50px rgba(139, 92, 246, 0.4),
-    0 0 100px rgba(59, 130, 246, 0.2),
-    inset 0 0 80px rgba(139, 92, 246, 0.05);
-  backdrop-filter: blur(20px);
 }
 
 /* Game Area */
@@ -144,7 +138,7 @@ body::after {
   position: absolute;
   border-radius: 8px;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.2s;
   will-change: transform;
   box-shadow:
     0 5px 20px rgba(0, 0, 0, 0.5),
@@ -490,9 +484,6 @@ body::after {
   border-image: linear-gradient(135deg, #8b5cf6, #3b82f6) 1;
   z-index: 500;
   will-change: transform;
-  box-shadow:
-    0 0 80px rgba(139, 92, 246, 0.6),
-    0 20px 60px rgba(0, 0, 0, 0.8);
 }
 
 h1 {
@@ -592,10 +583,6 @@ p {
   overflow-y: auto;
   overflow-x: hidden;
   margin: auto;
-  box-shadow:
-    0 0 100px rgba(139, 92, 246, 0.6),
-    0 0 200px rgba(59, 130, 246, 0.4),
-    inset 0 0 60px rgba(139, 92, 246, 0.1);
   border: 3px solid;
   border-image: linear-gradient(135deg, #8b5cf6, #3b82f6, #ec4899) 1;
   z-index: 1;
