@@ -38,7 +38,6 @@ export function loop() {
 }
 
 function update() {
-
   movePaddle(config.cursors, config.paddle, config.cvs);
   config.ball.x += config.ball.dx;
   config.ball.y += config.ball.dy;
@@ -139,7 +138,6 @@ function update() {
 
       const threshold = 4; // corner sensitivity in pixels
 
-
       if (Math.abs(minOverlapX - minOverlapY) < threshold) {
         config.ball.dx *= -1;
         config.ball.dy *= -1;
@@ -156,7 +154,7 @@ function update() {
 
       if (config.gameStatus.score == 200 || config.gameStatus.score == 400) {
         return story(config.gameStatus.score);
-      };
+      }
       break;
     }
   }
@@ -190,13 +188,13 @@ function GameLoop() {
 
   config.restartBtn.addEventListener("click", () => {
     Restart();
-
   });
 
   let spaceCooldown = false;
 
   document.body.addEventListener("keydown", (event) => {
     if (event.key === " " && !spaceCooldown) {
+      // Handle spacebar press with cooldown to prevent rapid toggling
       spaceCooldown = true;
       if (
         (config.gameState.gameOver || config.gameState.gameWine) &&
@@ -204,16 +202,17 @@ function GameLoop() {
       ) {
         Restart();
       } else if (!config.gameState.gameStart && !config.gameState.gamePause) {
+        // Start the game from intro screen
         config.introScreen.classList.add("hidden");
         config.gameContainer.style.opacity = "1";
         config.gameState.gameStart = true;
         config.gameState.gamePause = false;
-        start();
         creatTime();
         clearAnimation();
         loop();
       } else if (config.gameState.gameStart && !config.gameState.gamePause) {
-        config.gameContainer.style.opacity = '0.3';
+        // Pause the game
+        config.gameContainer.style.opacity = "0.3";
         config.gameState.gamePause = true;
         config.gameState.gameStart = false;
         clearAnimation();
@@ -226,6 +225,7 @@ function GameLoop() {
         !config.gameState.gameOver &&
         !config.gameState.gameWine
       ) {
+        // Resume the game
         config.gameContainer.style.opacity = "1";
         config.gameState.gameStart = true;
         config.gameState.gamePause = false;
@@ -234,7 +234,7 @@ function GameLoop() {
         clearAnimation();
         loop();
       }
-
+      // Set a short timeout to reset the cooldown
       setTimeout(() => {
         spaceCooldown = false;
       }, 500);
